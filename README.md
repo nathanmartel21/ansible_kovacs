@@ -9,10 +9,10 @@
 
 <p align="center">
   <a href="https://github.com/nathanmartel21/ansible_kovacs/commits/main">
-  <img src="https://github.com/nathanmartel21/ansible_kovacs/actions/workflows/markdown-check.yml/badge.svg" alt="CI Status" />
-  </a>
+  <img src="https://github.com/nathanmartel21/ansible_kovacs/actions/workflows/markdown-check.yml/badge.svg" alt="CI Status" /></a>
   <img src="https://img.shields.io/badge/outil-Ansible-black?logo=ansible&logoColor=white" alt="Ansible"/>
   <img src="https://img.shields.io/badge/infrastructure-IaC-blue" alt="Infrastructure as Code"/>
   <img src="https://img.shields.io/badge/école-IMT%20Mines%20Alès-orange" alt="IMT Mines Alès"/>
   <img src="https://img.shields.io/badge/langue-Français-blue" alt="Français"/>
-</p> 
+</p>
+
