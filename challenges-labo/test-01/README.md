@@ -6,9 +6,7 @@
 
 ## Description
 
-Ce test-01 fait partie du laboratoire Ansible pour la prise en main. Il utilise quatre
-machines Alpine Linux 3.19 pour mettre en place un environnement de pratique avec
-Ansible.
+Cet exercice pratique test-01 fait partie du laboratoire Ansible pour la prise en main. Il utilise quatre machines Alpine Linux 3.19 pour mettre en place un environnement de pratique avec Ansible.
 
 ## Récupération de la box Vagrant
 

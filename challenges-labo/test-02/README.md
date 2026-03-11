@@ -6,7 +6,7 @@
 
 ## Description
 
-Ce test-02 fait partie du laboratoire Ansible. Il utilise quatre boxes Vagrant représentant les principales distributions Linux rencontrées en contexte professionnel :
+Cet exercice pratique test-02 fait partie du laboratoire Ansible. Il utilise quatre boxes Vagrant représentant les principales distributions Linux suivantes :
 
 - **Rocky Linux 9** (clone de Red Hat Enterprise Linux)
 - **Debian 12**
