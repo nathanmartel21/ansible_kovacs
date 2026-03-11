@@ -1,4 +1,4 @@
-name: CI
+name: CI *.md
 
 on:
   push:
