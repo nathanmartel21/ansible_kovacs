@@ -15,4 +15,3 @@
   <img src="https://img.shields.io/badge/école-IMT%20Mines%20Alès-orange" alt="IMT Mines Alès"/>
   <img src="https://img.shields.io/badge/langue-Français-blue" alt="Français"/>
 </p>
-
