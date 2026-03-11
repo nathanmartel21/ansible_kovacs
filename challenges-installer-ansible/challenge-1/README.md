@@ -98,7 +98,6 @@ $ vagrant destroy -f ubuntu
 
 Cela permet de libérer les ressources et de supprimer complètement l’environnement de test.
 
-
 ## Auteur
 
 > @uthor : Nathan Martel, étudiant en deuxième année à l'École des Mines d'Alès.
