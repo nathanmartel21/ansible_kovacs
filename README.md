@@ -1,8 +1,12 @@
 # Ansible Kovacs
 
 <table><tr><td style="vertical-align: top; width: 70%;"><blockquote><strong>NOTE</strong><br>
-      Ce dépôt contient l'ensemble des <strong>ateliers pratiques</strong> et des <strong>exercices</strong> réalisés dans le cadre du cours <strong>Infrastructure as Code (IaC)</strong> à <strong>IMT Mines Alès</strong>.<br><br>
-      Le cours se concentre sur la technologie<strong>Ansible</strong>, un outil d'automatisation dédié à la <strong>gestion de configuration</strong> et au <strong>déploiement d'infrastructures</strong>.
+      Ce dépôt contient l'ensemble des <strong>ateliers pratiques</strong> et des
+      <strong>exercices</strong> réalisés dans le cadre du cours <strong>Infrastructure as Code
+      (IaC)</strong> à <strong>IMT Mines Alès</strong>.<br><br>
+      Le cours se concentre sur la technologie<strong>Ansible</strong>, un outil
+      d'automatisation dédié à la <strong>gestion de configuration</strong> et au
+      <strong>déploiement d'infrastructures</strong>.
       </blockquote></td></tr></table>
 
 ---
