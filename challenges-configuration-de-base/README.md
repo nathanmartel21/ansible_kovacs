@@ -215,4 +215,3 @@ $ vagrant destroy -f
 ---
 
 **TLP: RED** - Ce document markdown est classifié sous la marque TLP: RED
-
