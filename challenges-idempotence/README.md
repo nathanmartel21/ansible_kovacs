@@ -263,8 +263,3 @@ Observation : Contrairement aux modules idempotents vus précédemment, le modul
 ![Output du package command pour df -h /](../challenges-idempotence/captures/capture9.png)
 
 Cela s'explique par le fait que le module `command` n'est pas conçu pour être idempotent. Il exécute simplement une commande et retourne le résultat sans vérifier si un changement d'état a réellement eu lieu. C'est une distinction importante entre les modules Ansible (comme `package`, `copy`, `file`) qui sont idempotents, et les commandes shell génériques qui ne le sont pas.
-
-- **L'idempotence s'applique aux modules Ansible**. Les modules comme `package`, `copy` et `file` détectent l'état actuel et n'effectuent une action que si l'état désiré n'est pas atteint. 
-- **Les changements sont signalés clairement** : La valeur `changed: true` indique qu'une action a été effectuée, tandis que `changed: false` indique que le système était déjà dans l'état désiré. 
-- **Les commandes génériques ne sont pas idempotentes** : Le module `command` exécute toujours sa commande et signale `changed: true` à chaque fois.
-- **L'idempotence est la force d'Ansible** : Elle permet d'exécuter les mêmes playbooks plusieurs fois en confiance, sans crainte de surcharger ou de modifier le système de manière inattendue.
