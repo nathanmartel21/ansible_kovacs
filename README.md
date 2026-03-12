@@ -19,3 +19,23 @@
   <img src="https://img.shields.io/badge/école-IMT%20Mines%20Alès-orange" alt="IMT Mines Alès"/>
   <img src="https://img.shields.io/badge/langue-Français-blue" alt="Français"/>
 </p>
+
+---
+
+  <table align="center">
+    <tr>
+      <th>Author</th>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/nathanmartel21">
+          <img src="https://github.com/nathanmartel21.png?size=115" width="115" alt="@nathanmartel21" /><br />
+          <sub>@nathanmartel21</sub>
+        </a>
+        <br /><br />
+        <a href="https://github.com/sponsors/nathanmartel21">
+          <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=white" alt="Sponsor nathanmartel21" />
+        </a>
+      </td>
+    </tr>
+  </table>
