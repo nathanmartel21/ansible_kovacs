@@ -43,6 +43,7 @@ $ ls
 ```
 
 Le répertoire contient :
+
 - `ansible.cfg` : fichier de configuration d'Ansible
 - `inventory` : inventaire contenant les Target Hosts
 
@@ -239,6 +240,7 @@ $ ansible all -m file -a "path=/tmp/test3.txt state=absent"
 Résultat : `changed: false`. Le fichier n'existe plus, donc il n'y a rien à supprimer. Voici la capture d'écran du résultat :
 
 ![Seconde execution de file suppression](../challenges-idempotence/captures/capture8.png)
+
 ---
 
 ## Cas où l'idempotence ne s'applique pas
