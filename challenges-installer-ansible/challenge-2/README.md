@@ -28,7 +28,7 @@ $ vagrant ssh ubuntu
 
 ## Mise à jour des dépôts
 
-Avant l’ajout du PPA, on met à jour les informations APT :
+Avant l’ajout du PPA, je mets à jour les informations APT :
 
 ```bash
 $ sudo apt update
@@ -50,7 +50,7 @@ $ sudo apt update
 
 ## Recherche et installation du paquet Ansible
 
-On peut inspecter à nouveau les paquets disponibles :
+Je peux inspecter à nouveau les paquets disponibles :
 
 ```bash
 $ apt-cache search --names-only ansible
@@ -66,7 +66,7 @@ APT télécharge la version la plus récente fournie par le PPA et ses dépendan
 
 ## Vérification de l’installation
 
-Après installation, on vérifie la version d’Ansible :
+Après installation, je vérifie la version d’Ansible :
 
 ```bash
 $ ansible --version
@@ -80,13 +80,13 @@ Cette version issue du PPA (**2.17.14**) est plus récente que celle obtenue via
 
 ## Suppression de la machine virtuelle
 
-Une fois les vérifications terminées, on quitte la VM :
+Une fois les vérifications terminées, je quitte la VM :
 
 ```bash
 $ exit
 ```
 
-Puis on la détruit :
+Puis je la supprime :
 
 ```bash
 $ vagrant destroy -f ubuntu
