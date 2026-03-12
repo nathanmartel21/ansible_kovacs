@@ -93,7 +93,7 @@ J’ai exécuté un ping Ansible sans configuration spécifique :
 $ ansible all -i "target01,target02,target03," -m ping
 ```
 
-Le résultat indique un succès pour chaque Target Host : 
+Le résultat indique un succès pour chaque Target Host :
 
 ![ansible ping](../challenges-configuration-de-base/captures/capture1.png)
 
@@ -215,3 +215,4 @@ $ vagrant destroy -f
 ---
 
 **TLP: RED** - Ce document markdown est classifié sous la marque TLP: RED
+

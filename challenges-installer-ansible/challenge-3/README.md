@@ -48,7 +48,7 @@ Le module `venv` étant intégré, j’ai créé un environnement local personne
 $ python3 -m venv ~/.venv/ansible
 ```
 
-Puis je l’ai activé : 
+Puis je l’ai activé :
 
 ```bash
 $ source ~/.venv/ansible/bin/activate
