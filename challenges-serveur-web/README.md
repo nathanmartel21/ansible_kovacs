@@ -98,7 +98,8 @@ J'ai exécuté le playbook, puis j'ai vérifié la page web avec `curl` depuis l
 $ ansible-playbook playbooks/apache-debian.yml
 $ curl debian
 ```
-Résultat obtenu : 
+
+Résultat obtenu :
 
 ![curl debian](../challenges-serveur-web/captures/capture2.png)
 
@@ -145,7 +146,8 @@ J'ai exécuté le playbook, puis j'ai vérifié la page web avec `curl` depuis l
 $ ansible-playbook playbooks/apache-rocky.yml
 $ curl rocky
 ```
-Résultat obtenu : 
+
+Résultat obtenu :
 
 ![curl rocky](../challenges-serveur-web/captures/capture3.png)
 
@@ -192,7 +194,8 @@ J'ai exécuté le playbook, puis j'ai vérifié la page web avec `curl` depuis l
 $ ansible-playbook playbooks/apache-suse.yml
 $ curl suse
 ```
-Résultat obtenu : 
+
+Résultat obtenu :
 
 ![curl suse](../challenges-serveur-web/captures/capture4.png)
 
@@ -296,7 +299,7 @@ Je me suis amusé à faire un playbook unique permettant d’installer **Apache 
       when: ansible_os_family == "Suse"
 ```
 
-Voici une capture d'écran de l'exécution : 
+Voici une capture d'écran de l'exécution :
 
 ![ansible playbook](../challenges-serveur-web/captures/capture5.png)
 
