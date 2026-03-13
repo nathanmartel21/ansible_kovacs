@@ -73,7 +73,7 @@ Ensuite, j'ai commencé par écrire le playbook `chrony.yml` :
 $ vim playbooks/chrony.yml
 ```
 
-Dans ce playbook, j'ai ajouté une tâche pour installer `chrony`, une autre pour démarrer le service, et enfin une tâche de copie (module `copy`) pour injecter ma propre configuration. 
+Dans ce playbook, j'ai ajouté une tâche pour installer `chrony`, une autre pour démarrer le service, et enfin une tâche de copie (module `copy`) pour injecter ma propre configuration.
 La directive `notify` est placée sur la tâche de copie afin d'appeler le `handler` uniquement si le fichier de configuration est modifié :
 
 ```yaml
