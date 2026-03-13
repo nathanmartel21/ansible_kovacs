@@ -89,7 +89,6 @@ $ ansible-playbook playbooks/myvars1.yml -e mybike=Kawasaki_Ninja_650
 
 ![ansible-playbook playbooks/myvars1.yml -e mybike=Kawasaki_Ninja_650](../challenges-variables/captures/capture3.png)
 
-
 **Remplacement des deux variables à la fois :**
 
 ```bash
@@ -121,7 +120,7 @@ J'ai écrit un second playbook `playbooks/myvars2.yml` utilisant cette fois le m
         msg: "My car : {{ mycar }}, My bike : {{ mybike }}"
 ```
 
-Sans surcharger les variables, j'ai exécuté ce playbook : 
+Sans surcharger les variables, j'ai exécuté ce playbook :
 
 ```bash
 $ ansible-playbook playbooks/myvars2.yml
@@ -182,7 +181,6 @@ Résultat :
 
 ![Capture d'écran de ansible-playbook playbooks/myvars3.yml](../challenges-variables/captures/capture7.png)
 
-
 Puis, j'ai spécifié des valeurs différentes uniquement pour la cible `target02` en créant le fichier `playbooks/host_vars/target02.yml` :
 
 ```bash
@@ -233,7 +231,7 @@ Pour finir, j'ai créé un playbook `playbooks/display_user.yml` utilisant le m�
         msg: "User : {{ user }}, Password : {{ password }}"
 ```
 
-J'ai commencé par tester ce playbook avec les valeurs par défaut, donc en laissant vide : 
+J'ai commencé par tester ce playbook avec les valeurs par défaut, donc en laissant vide :
 
 ```bash
 $ ansible-playbook playbooks/display_user.yml
