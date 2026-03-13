@@ -61,6 +61,7 @@ J'ai créé le playbook `playbooks/apache-debian.yml`. Pour Debian, le gestionna
 
 ```yaml
 ---
+
 - hosts: debian
 
   tasks:
@@ -111,6 +112,7 @@ J'ai créé le playbook `playbooks/apache-rocky.yml`. Sous Rocky Linux, le gesti
 
 ```yaml
 ---
+
 - hosts: rocky
 
   tasks:
@@ -157,6 +159,7 @@ J'ai créé le playbook `playbooks/apache-suse.yml`. Sur SUSE Linux, le gestionn
 
 ```yaml
 ---
+
 - hosts: suse
 
   tasks:
@@ -205,6 +208,99 @@ Une fois les tests terminés, j’ai quitté le Control Host et supprimé toutes
 $ exit
 $ vagrant destroy -f
 ```
+
+## Notes
+
+Ansible étant mon cœur de métier en alternance, il est possible d'utiliser **un seul playbook capable de s’adapter à la distribution** grâce aux facts Ansible (`ansible_os_family`).
+
+Je me suis amusé à faire un playbook unique permettant d’installer **Apache sur Debian, Rocky Linux et SUSE** et en installant une page web personnalisée selon la distribution. Voici le playbook complet :
+
+```yaml
+---
+
+- hosts: all
+
+  tasks:
+
+    - name: Update apt cache (Debian)
+      apt:
+        update_cache: true
+      when: ansible_os_family == "Debian"
+
+    - name: Install Apache on Debian
+      apt:
+        name: apache2
+        state: present
+      when: ansible_os_family == "Debian"
+
+    - name: Install Apache on Rocky
+      dnf:
+        name: httpd
+        state: present
+      when: ansible_os_family == "RedHat"
+
+    - name: Install Apache on SUSE
+      zypper:
+        name: apache2
+        state: present
+      when: ansible_os_family == "Suse"
+
+    - name: Start Apache on Debian and SUSE
+      service:
+        name: apache2
+        state: started
+        enabled: true
+      when: ansible_os_family == "Debian" or ansible_os_family == "Suse"
+
+    - name: Start Apache on Rocky
+      service:
+        name: httpd
+        state: started
+        enabled: true
+      when: ansible_os_family == "RedHat"
+
+    - name: Install web page Debian
+      copy:
+        dest: /var/www/html/index.html
+        mode: 0644
+        content: |
+          <html>
+          <body>
+          <h1>Apache web server running on Debian Linux</h1>
+          </body>
+          </html>
+      when: ansible_distribution == "Debian"
+
+    - name: Install web page Rocky
+      copy:
+        dest: /var/www/html/index.html
+        mode: 0644
+        content: |
+          <html>
+          <body>
+          <h1>Apache web server running on Rocky Linux</h1>
+          </body>
+          </html>
+      when: ansible_distribution == "Rocky"
+
+    - name: Install web page SUSE
+      copy:
+        dest: /srv/www/htdocs/index.html
+        mode: 0644
+        content: |
+          <html>
+          <body>
+          <h1>Apache web server running on SUSE Linux</h1>
+          </body>
+          </html>
+      when: ansible_os_family == "Suse"
+```
+
+Voici une capture d'écran de l'exécution : 
+
+![ansible playbook](../challenges-serveur-web/captures/capture5.png)
+
+Avec les commandes `curl` à la fin, j'ai pu vérifier que chaque distribution renvoie bien sa propre page web personnalisée.
 
 ## Auteur
 
