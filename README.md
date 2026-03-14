@@ -66,6 +66,7 @@ Le projet est découpé en plusieurs dossiers, chacun correspondant à une thém
 - **[`challenges-serveur-web/`](challenges-serveur-web/)** : Création d'un playbook robuste capable de s'adapter automatiquement à la distribution cible (Debian, Rocky, SUSE) pour installer Apache en s'appuyant sur les *Ansible facts* (`ansible_os_family`).
 - **[`challenges-handlers/`](challenges-handlers/)** : Utilisation de la directive `notify` et des `handlers` pour n'effectuer des actions (ex: redémarrer `chrony`) que lorsqu'une modification réelle de la configuration est détectée.
 - **[`challenges-variables/`](challenges-variables/)** : Découverte de la précédence et des différentes méthodes d'injection de variables (`play vars`, `set_fact`, `group_vars`, `host_vars`, surcharge via `extra vars` et saisie via `vars_prompt`).
+- **[`challenges-variables-enregistrees/`](challenges-variables-enregistrées/)** : Utilisation de la directive `register` pour capturer la sortie de commandes (`uname`, `rpm`) et la manipuler avec `debug`. Introduction à `changed_when` pour maîtriser l'état de changement des tâches.
 
 ## Ressources
 
