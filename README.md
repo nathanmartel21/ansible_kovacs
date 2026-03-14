@@ -1,10 +1,10 @@
-# Ansible Kovacs
+# Ateliers Pratiques : Infrastructure as Code avec Ansible
 
 <table><tr><td style="vertical-align: top; width: 70%;"><blockquote><strong>NOTE</strong><br>
       Ce dépôt contient l'ensemble des <strong>ateliers pratiques</strong> et des
       <strong>exercices</strong> réalisés dans le cadre du cours <strong>Infrastructure as Code
       (IaC)</strong> à <strong>IMT Mines Alès</strong>.<br><br>
-      Le cours se concentre sur la technologie<strong>Ansible</strong>, un outil
+      Le cours se concentre sur la technologie <strong>Ansible</strong>, un outil
       d'automatisation dédié à la <strong>gestion de configuration</strong> et au
       <strong>déploiement d'infrastructures</strong>.
       </blockquote></td></tr></table>
@@ -22,20 +22,60 @@
 
 ---
 
-  <table align="center">
-    <tr>
-      <th>Author</th>
-    </tr>
-    <tr>
-      <td align="center">
-        <a href="https://github.com/nathanmartel21">
-          <img src="https://github.com/nathanmartel21.png?size=115" width="115" alt="@nathanmartel21" /><br />
-          <sub>@nathanmartel21</sub>
-        </a>
-        <br /><br />
-        <a href="https://github.com/sponsors/nathanmartel21">
-          <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=white" alt="Sponsor nathanmartel21" />
-        </a>
-      </td>
-    </tr>
-  </table>
+## À propos de l'auteur
+
+<table align="center">
+  <tr>
+    <th>Author</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/nathanmartel21">
+        <img src="https://github.com/nathanmartel21.png?size=115" width="115" alt="@nathanmartel21" /><br />
+        <sub>@nathanmartel21</sub>
+      </a>
+      <br /><br />
+      <a href="https://github.com/sponsors/nathanmartel21">
+        <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=white" alt="Sponsor nathanmartel21" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+Le seul auteur de ce dépôt s'appelle **Nathan MARTEL**, étudiant promo INFRES17 en deuxième année à l'**École des Mines d'Alès**. Je suis également étudiant alternant chez **Groupama Supports et Services** en tant qu'**apprenti ingénieur automation**. Je travaille donc avec **Ansible** tous les jours depuis un an et demi, j'ai déjà une solide maîtrise de cet outil et des concepts liés à l'Infrastructure as Code.
+
+---
+
+## À propos du projet
+
+Ce projet est un recueil d'ateliers pratiques progressifs visant à maîtriser **Ansible**. En partant de l'initialisation d'environnements locaux avec **Vagrant** et **VirtualBox**, ce dépôt couvre toutes les étapes d'apprentissage : de l'installation du Control Node à la configuration avancée (handlers, précédence des variables, facts multi-distributions, etc.) en passant par la mise en place de l'authentification et des inventaires.
+
+Chaque laboratoire est documenté de manière approfondie avec des explications pas à pas, des extraits de code et des captures d'écran des résultats obtenus.
+
+*⚠️ Remarque : Les documents techniques de ce dépôt ont été rédigés avec une classification initiale **TLP: RED**.*
+
+## Structuration du projet
+
+Le projet est découpé en plusieurs dossiers, chacun correspondant à une thématique de configuration ou à un niveau de difficulté précis :
+
+- 🚀 **[`challenges-labo/`](challenges-labo/)** : Prise en main de l'environnement Vagrant. Déploiement de clusters Alpine Linux et d'environnements multi-distributions (Rocky, Debian, OpenSUSE, Ubuntu).
+- 📦 **[`challenges-installer-ansible/`](challenges-installer-ansible/)** : Démonstration de différentes méthodes d'installation du Control Host Ansible (via un PPA sur Ubuntu ou via PIP dans un `virtualenv` sur Rocky Linux).
+- 🔑 **[`challenges-authentification/`](challenges-authentification/)** : Mise en place des clés SSH et du fichier `known_hosts` pour l'authentification sans mot de passe entre le Control Host et les Target Hosts.
+- ⚙️ **[`challenges-configuration-de-base/`](challenges-configuration-de-base/)** : Initiation à l'organisation d'un projet Ansible, paramétrage du fichier `ansible.cfg`, gestion des inventaires statiques et mise en place de la journalisation.
+- 🔄 **[`challenges-idempotence/`](challenges-idempotence/)** : Illustration par la pratique du concept clé d'idempotence (comparaison entre les modules `package`, `copy`, `file` et l'absence d'idempotence du module `command`).
+- 🌐 **[`challenges-serveur-web/`](challenges-serveur-web/)** : Création d'un playbook robuste capable de s'adapter automatiquement à la distribution cible (Debian, Rocky, SUSE) pour installer Apache en s'appuyant sur les *Ansible facts* (`ansible_os_family`).
+- 🛠️ **[`challenges-handlers/`](challenges-handlers/)** : Utilisation de la directive `notify` et des `handlers` pour n'effectuer des actions (ex: redémarrer `chrony`) que lorsqu'une modification réelle de la configuration est détectée.
+- 🧩 **[`challenges-variables/`](challenges-variables/)** : Découverte de la précédence et des différentes méthodes d'injection de variables (`play vars`, `set_fact`, `group_vars`, `host_vars`, surcharge via `extra vars` et saisie via `vars_prompt`).
+
+## Ressources
+
+Les ateliers sont basés sur la formation :
+
+- **Source** : [Formation Ansible](https://formations.microlinux.fr/ansible/a-propos/)
+- **Auteur de la formation** : Microlinux (Nicolas Kovacs)
+
+## Licence
+
+Ce dépôt est distribué sous la classification **TLP: RED**. 
+
+Pour plus de détails sur les restrictions de partage et d'utilisation, veuillez consulter le fichier de [LICENSE.md](LICENSE.md).
