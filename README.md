@@ -76,6 +76,6 @@ Les ateliers sont basés sur la formation :
 
 ## Licence
 
-Ce dépôt est distribué sous la classification **TLP: RED**. 
+Ce dépôt est distribué sous la classification **TLP: RED**.
 
 Pour plus de détails sur les restrictions de partage et d'utilisation, veuillez consulter le fichier de [LICENSE.md](LICENSE).
