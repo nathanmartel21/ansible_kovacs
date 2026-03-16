@@ -1,0 +1,34 @@
+site_name = "Ateliers Pratiques : IaC avec Ansible"
+site_description = "Ateliers et exercices sur l'Infrastructure as Code avec Ansible"
+site_author = "Nathan Martel"
+
+nav = [
+  { "Accueil" = "index.md" },
+  { "Un labo pour Ansible" = [
+    { "Test-01" = "challenges-labo/test-01/README.md" },
+    { "Test-02" = "challenges-labo/test-02/README.md" }
+  ] },
+  { "Installer Ansible" = [
+    { "Challenge 1" = "challenges-installer-ansible/challenge-1/README.md" },
+    { "Challenge 2" = "challenges-installer-ansible/challenge-2/README.md" },
+    { "Challenge 3" = "challenges-installer-ansible/challenge-3/README.md" }
+  ] },
+  { "Authentification" = "challenges-authentification/README.md" },
+  { "Configuration de base" = "challenges-configuration-de-base/README.md" },
+  { "Idempotence" = "challenges-idempotence/README.md" },
+  { "Un serveur web simple" = "challenges-serveur-web/README.md" },
+  { "Les handlers" = "challenges-handlers/README.md" },
+  { "Les variables" = "challenges-variables/README.md" },
+  { "Les variables enregistrées" = "challenges-variables-enregistrées/README.md" },
+  { "Facts et variables implicites" = "challenges-facts-variables-implictes/README.md" },
+  { "Cibles hétérogènes" = "challenges-cibles-hétérogènes/README.md" },
+  { "Jinja & Templates" = "challenges-jinja-templates/README.md" }
+]
+
+[theme]
+name = "material"
+language = "fr"
+
+[theme.palette]
+scheme = "slate"
+primary = "indigo"

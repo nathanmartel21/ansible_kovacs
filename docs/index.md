@@ -54,24 +54,6 @@ Chaque laboratoire est documenté de manière approfondie avec des explications 
 
 *⚠️ Remarque : Les documents techniques de ce dépôt ont été rédigés avec une classification initiale **TLP: RED**.*
 
-## Documentation
-
-La documentation complète et interactive de ce projet est propulsée par **Zensical**. Pour la générer et la consulter en local avec son thème et sa navigation personnalisée, suivez ces étapes :
-
-```bash
-# 1. Créer et activer l'environnement virtuel
-python3 -m venv .venv
-source .venv/bin/activate
-
-# 2. Installer Zensical
-pip install zensical
-
-# 3. Démarrer le serveur de développement local
-zensical serve
-```
-
-Ouvrez ensuite votre navigateur web et rendez-vous à l'adresse **http://localhost:8000** pour parcourir les ateliers interactifs.
-
 ## Structuration du projet
 
 Le projet est découpé en plusieurs dossiers, chacun correspondant à une thématique de configuration ou à un niveau de difficulté précis :
