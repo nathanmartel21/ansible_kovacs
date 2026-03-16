@@ -9,6 +9,7 @@
 Cet atelier pratique a pour objectif d'apprendre à gérer des **Target Hosts hétérogènes** avec Ansible. L'enjeu est de déployer et configurer le service de synchronisation NTP via `chrony` sur plusieurs distributions Linux différentes (Debian, Ubuntu, Rocky Linux et SUSE Linux) en adaptant dynamiquement l'exécution selon les spécificités du système cible (nom du paquet, nom du service, emplacement du fichier de configuration).
 
 J'ai exploré deux méthodes :
+
 1. **La méthode explicite (les "gros sabots")** : en utilisant les modules spécifiques à chaque gestionnaire de paquets (`apt`, `dnf`, `zypper`) avec des conditions `when`.
 2. **La méthode subtile avec des variables** : en définissant dynamiquement les paramètres du système avec `set_fact` avant d'utiliser des modules génériques comme `package`.
 
@@ -154,7 +155,7 @@ Pour vérifier la bonne prise en compte, j'ai vérifié le statut du service ave
 $ ansible all -m shell -a "systemctl status chronyd | head -n 5"
 ```
 
-Chaque machine cible a renvoyé un statut `active (running)`, validant que le service est bien déployé : 
+Chaque machine cible a renvoyé un statut `active (running)`, validant que le service est bien déployé :
 
 ![ansible all -m shell -a "systemctl status chronyd | head -n 5"](../challenges-cibles-hétérogènes/captures/capture2.png)
 
@@ -175,7 +176,7 @@ $ cd ~/ansible/projets/ema
 
 ## Méthode 2 : Approche avec `set_fact`
 
-La première méthode s'avérant très redondante, j'ai créé un second playbook `playbooks/chrony-02.yml`. Cette fois-ci, j'ai utilisé la directive `set_fact` pour associer les valeurs de configuration spécifiques à la distribution dans des variables au début du playbook. 
+La première méthode s'avérant très redondante, j'ai créé un second playbook `playbooks/chrony-02.yml`. Cette fois-ci, j'ai utilisé la directive `set_fact` pour associer les valeurs de configuration spécifiques à la distribution dans des variables au début du playbook.
 
 Grâce à cela, l'installation, la configuration et le démarrage peuvent se faire via des modules génériques (`package`, `service`) en appelant les variables.
 
