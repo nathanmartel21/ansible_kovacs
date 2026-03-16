@@ -13,7 +13,12 @@
 
 <p align="center">
   <a href="https://github.com/nathanmartel21/ansible_kovacs/commits/main">
+<<<<<<< HEAD
   <img src="https://github.com/nathanmartel21/ansible_kovacs/actions/workflows/markdown-check.yml/badge.svg" alt="CI Status" /></a>
+=======
+    <img src="https://img.shields.io/badge/build-passing-brightgreen?style=flat-square" alt="CI Status" />
+  </a>
+>>>>>>> e0f7ae5 (feat: (#17) set up zensical for documentation)
   <img src="https://img.shields.io/badge/outil-Ansible-black?logo=ansible&logoColor=white" alt="Ansible"/>
   <img src="https://img.shields.io/badge/infrastructure-IaC-blue" alt="Infrastructure as Code"/>
   <img src="https://img.shields.io/badge/école-IMT%20Mines%20Alès-orange" alt="IMT Mines Alès"/>
@@ -24,6 +29,7 @@
 
 ## À propos de l'auteur
 
+<center>
 <table align="center">
   <tr>
     <th>Author</th>
@@ -41,6 +47,7 @@
     </td>
   </tr>
 </table>
+</center>
 
 Le seul auteur de ce dépôt s'appelle **Nathan MARTEL**, étudiant promo INFRES17 en deuxième année à l'**École des Mines d'Alès**. Je suis également étudiant alternant chez **Groupama Supports et Services** en tant qu'**apprenti ingénieur automation**. Je travaille donc avec **Ansible** tous les jours depuis un an et demi, j'ai déjà une solide maîtrise de cet outil et des concepts liés à l'Infrastructure as Code.
 
