@@ -1,11 +1,8 @@
-# Environnements virtuels Python
 .venv/
 venv/
 
-# Fichiers compilés par Zensical (Site statique)
 site/
 
-# Cache Python
 *.cache/
 __pycache__/
 *.pyc
