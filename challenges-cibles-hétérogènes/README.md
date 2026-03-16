@@ -249,7 +249,7 @@ $ ansible-playbook playbooks/chrony-02.yml
 
 Résultat de l'exécution :
 
-[!ansible-playbook playbooks/chrony-02.yml](../challenges-cibles-hétérogènes/captures/capture3.png)
+![ansible-playbook playbooks/chrony-02.yml](../challenges-cibles-hétérogènes/captures/capture3.png)
 
 J'ai ensuite vérifié à nouveau que l'installation a bien fonctionné de la même façon que précédemment :
 
@@ -257,7 +257,7 @@ J'ai ensuite vérifié à nouveau que l'installation a bien fonctionné de la m�
 $ ansible all -m shell -a "systemctl status chronyd | head -n 5"
 ```
 
-[ansible all -m shell -a "systemctl status chronyd | head -n 5"](../challenges-cibles-hétérogènes/captures/capture4.png)
+![ansible all -m shell -a "systemctl status chronyd | head -n 5"](../challenges-cibles-hétérogènes/captures/capture4.png)
 
 Avec `set_fact` et les modules génériques est bien plus propre et élégante. Elle permet d'alléger le code de déploiement en le centralisant.
 
