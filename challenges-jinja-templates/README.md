@@ -48,7 +48,7 @@ L'environnement `direnv` s'est chargé automatiquement.
 
 ## Création du Template Jinja2
 
-Le module `template` va par défaut chercher les fichiers portant l'extension `.j2` dans un sous-répertoire `templates/` situé à côté du playbook. 
+Le module `template` va par défaut chercher les fichiers portant l'extension `.j2` dans un sous-répertoire `templates/` situé à côté du playbook.
 
 J'ai donc créé ce répertoire et le fichier template `chrony.conf.j2` :
 
@@ -77,7 +77,7 @@ logdir /var/log/chrony
 
 ## Création du playbook
 
-Ensuite, j'ai écrit le playbook `chrony.yml`. J'ai utilisé une définition de variables conditionnelles (`if/else` en syntaxe Jinja2) dans la section `vars` pour attribuer le bon chemin de configuration et le bon nom de service selon la famille d'OS (`ansible_os_family`). 
+Ensuite, j'ai écrit le playbook `chrony.yml`. J'ai utilisé une définition de variables conditionnelles (`if/else` en syntaxe Jinja2) dans la section `vars` pour attribuer le bon chemin de configuration et le bon nom de service selon la famille d'OS (`ansible_os_family`).
 
 ```bash
 $ vim playbooks/chrony.yml
