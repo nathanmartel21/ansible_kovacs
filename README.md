@@ -67,7 +67,7 @@ pip install zensical
 zensical serve
 ```
 
-Ouvrez ensuite votre navigateur web et rendez-vous à l'adresse **http://localhost:8000** pour parcourir les ateliers interactifs.
+Ouvrez ensuite votre navigateur web et rendez-vous à l'adresse **[http://localhost:8000](http://localhost:8000)** pour parcourir les ateliers interactifs.
 
 ## Structuration du projet
 
