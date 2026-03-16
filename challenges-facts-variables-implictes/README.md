@@ -61,7 +61,7 @@ J'ai créé le playbook `playbooks/pkg-info.yml` pour afficher le gestionnaire d
 J'ai vérifié la syntaxe du playbook et exécuté :
 
 ```bash
-$ $ yamllint playbooks/pkg-info.yml
+$ yamllint playbooks/pkg-info.yml
 $ ansible-playbook playbooks/pkg-info.yml
 ```
 
