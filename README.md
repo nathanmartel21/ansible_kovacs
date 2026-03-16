@@ -67,6 +67,9 @@ Le projet est découpé en plusieurs dossiers, chacun correspondant à une thém
 - **[`challenges-handlers/`](challenges-handlers/)** : Utilisation de la directive `notify` et des `handlers` pour n'effectuer des actions (ex: redémarrer `chrony`) que lorsqu'une modification réelle de la configuration est détectée.
 - **[`challenges-variables/`](challenges-variables/)** : Découverte de la précédence et des différentes méthodes d'injection de variables (`play vars`, `set_fact`, `group_vars`, `host_vars`, surcharge via `extra vars` et saisie via `vars_prompt`).
 - **[`challenges-variables-enregistrees/`](challenges-variables-enregistrées/)** : Utilisation de la directive `register` pour capturer la sortie de commandes (`uname`, `rpm`) et la manipuler avec `debug`. Introduction à `changed_when` pour maîtriser l'état de changement des tâches.
+- **[`challenges-facts-variables-implictes/`](challenges-facts-variables-implictes/)** : Intégration des facts (`ansible_pkg_mgr`, `ansible_python_version`, `ansible_dns`) et des variables implicites (`inventory_hostname`) pour récupérer dynamiquement des informations sur les cibles.
+- **[`challenges-cibles-hétérogènes/`](challenges-cibles-hétérogènes/)** : Gestion de Target Hosts hétérogènes pour déployer un service (`chrony`) sur diverses distributions (Debian, Ubuntu, Rocky, SUSE) en utilisant des conditions ou la directive `set_fact`.
+- **[`challenges-jinja-templates/`](challenges-jinja-templates/)** : Manipulation des templates Jinja2 et du module `template` pour générer et injecter dynamiquement des fichiers de configuration adaptés au système cible.
 
 ## Ressources
 
