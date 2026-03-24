@@ -74,18 +74,18 @@ Ouvrez ensuite votre navigateur web et rendez-vous à l'adresse **[http://localh
 
 Le projet est découpé en plusieurs dossiers, chacun correspondant à une thématique de configuration ou à un niveau de difficulté précis :
 
-- **[`challenges-labo/`](challenges-labo/)** : Prise en main de l'environnement Vagrant. Déploiement de clusters Alpine Linux et d'environnements multi-distributions (Rocky, Debian, OpenSUSE, Ubuntu).
-- **[`challenges-installer-ansible/`](challenges-installer-ansible/)** : Démonstration de différentes méthodes d'installation du Control Host Ansible (via un PPA sur Ubuntu ou via PIP dans un `virtualenv` sur Rocky Linux).
-- **[`challenges-authentification/`](challenges-authentification/)** : Mise en place des clés SSH et du fichier `known_hosts` pour l'authentification sans mot de passe entre le Control Host et les Target Hosts.
-- **[`challenges-configuration-de-base/`](challenges-configuration-de-base/)** : Initiation à l'organisation d'un projet Ansible, paramétrage du fichier `ansible.cfg`, gestion des inventaires statiques et mise en place de la journalisation.
-- **[`challenges-idempotence/`](challenges-idempotence/)** : Illustration par la pratique du concept clé d'idempotence (comparaison entre les modules `package`, `copy`, `file` et l'absence d'idempotence du module `command`).
-- **[`challenges-serveur-web/`](challenges-serveur-web/)** : Création d'un playbook robuste capable de s'adapter automatiquement à la distribution cible (Debian, Rocky, SUSE) pour installer Apache en s'appuyant sur les *Ansible facts* (`ansible_os_family`).
-- **[`challenges-handlers/`](challenges-handlers/)** : Utilisation de la directive `notify` et des `handlers` pour n'effectuer des actions (ex: redémarrer `chrony`) que lorsqu'une modification réelle de la configuration est détectée.
-- **[`challenges-variables/`](challenges-variables/)** : Découverte de la précédence et des différentes méthodes d'injection de variables (`play vars`, `set_fact`, `group_vars`, `host_vars`, surcharge via `extra vars` et saisie via `vars_prompt`).
-- **[`challenges-variables-enregistrees/`](challenges-variables-enregistrées/)** : Utilisation de la directive `register` pour capturer la sortie de commandes (`uname`, `rpm`) et la manipuler avec `debug`. Introduction à `changed_when` pour maîtriser l'état de changement des tâches.
-- **[`challenges-facts-variables-implictes/`](challenges-facts-variables-implictes/)** : Intégration des facts (`ansible_pkg_mgr`, `ansible_python_version`, `ansible_dns`) et des variables implicites (`inventory_hostname`) pour récupérer dynamiquement des informations sur les cibles.
-- **[`challenges-cibles-hétérogènes/`](challenges-cibles-hétérogènes/)** : Gestion de Target Hosts hétérogènes pour déployer un service (`chrony`) sur diverses distributions (Debian, Ubuntu, Rocky, SUSE) en utilisant des conditions ou la directive `set_fact`.
-- **[`challenges-jinja-templates/`](challenges-jinja-templates/)** : Manipulation des templates Jinja2 et du module `template` pour générer et injecter dynamiquement des fichiers de configuration adaptés au système cible.
+- **[`challenges-labo/`](docs/challenges-labo/)** : Prise en main de l'environnement Vagrant. Déploiement de clusters Alpine Linux et d'environnements multi-distributions (Rocky, Debian, OpenSUSE, Ubuntu).
+- **[`challenges-installer-ansible/`](docs/challenges-installer-ansible/)** : Démonstration de différentes méthodes d'installation du Control Host Ansible (via un PPA sur Ubuntu ou via PIP dans un `virtualenv` sur Rocky Linux).
+- **[`challenges-authentification/`](docs/challenges-authentification/)** : Mise en place des clés SSH et du fichier `known_hosts` pour l'authentification sans mot de passe entre le Control Host et les Target Hosts.
+- **[`challenges-configuration-de-base/`](docs/challenges-configuration-de-base/)** : Initiation à l'organisation d'un projet Ansible, paramétrage du fichier `ansible.cfg`, gestion des inventaires statiques et mise en place de la journalisation.
+- **[`challenges-idempotence/`](docs/challenges-idempotence/)** : Illustration par la pratique du concept clé d'idempotence (comparaison entre les modules `package`, `copy`, `file` et l'absence d'idempotence du module `command`).
+- **[`challenges-serveur-web/`](docs/challenges-serveur-web/)** : Création d'un playbook robuste capable de s'adapter automatiquement à la distribution cible (Debian, Rocky, SUSE) pour installer Apache en s'appuyant sur les *Ansible facts* (`ansible_os_family`).
+- **[`challenges-handlers/`](docs/challenges-handlers/)** : Utilisation de la directive `notify` et des `handlers` pour n'effectuer des actions (ex: redémarrer `chrony`) que lorsqu'une modification réelle de la configuration est détectée.
+- **[`challenges-variables/`](docs/challenges-variables/)** : Découverte de la précédence et des différentes méthodes d'injection de variables (`play vars`, `set_fact`, `group_vars`, `host_vars`, surcharge via `extra vars` et saisie via `vars_prompt`).
+- **[`challenges-variables-enregistrees/`](docs/challenges-variables-enregistrées/)** : Utilisation de la directive `register` pour capturer la sortie de commandes (`uname`, `rpm`) et la manipuler avec `debug`. Introduction à `changed_when` pour maîtriser l'état de changement des tâches.
+- **[`challenges-facts-variables-implictes/`](docs/challenges-facts-variables-implictes/)** : Intégration des facts (`ansible_pkg_mgr`, `ansible_python_version`, `ansible_dns`) et des variables implicites (`inventory_hostname`) pour récupérer dynamiquement des informations sur les cibles.
+- **[`challenges-cibles-hétérogènes/`](docs/challenges-cibles-hétérogènes/)** : Gestion de Target Hosts hétérogènes pour déployer un service (`chrony`) sur diverses distributions (Debian, Ubuntu, Rocky, SUSE) en utilisant des conditions ou la directive `set_fact`.
+- **[`challenges-jinja-templates/`](docs/challenges-jinja-templates/)** : Manipulation des templates Jinja2 et du module `template` pour générer et injecter dynamiquement des fichiers de configuration adaptés au système cible.
 
 ## Ressources
 
