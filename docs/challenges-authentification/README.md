@@ -6,7 +6,7 @@
 
 ## Description
 
-Cet atelier pratique a pour objectif de mettre en place l'authentification sur les machines.
+Cet atelier pratique a pour objectif de mettre en place l'authentification sur les machines virtuelles.
 
 ## Démarrage des machines virtuelles
 
