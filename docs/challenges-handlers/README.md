@@ -65,7 +65,7 @@ Voici un aperçu de la configuration de base :
 
 ---
 
-## Création du playbook avec Handler
+## Création du playbook avec handler
 
 Ensuite, j'ai commencé par écrire le playbook `chrony.yml` :
 
@@ -118,7 +118,7 @@ La directive `notify` est placée sur la tâche de copie afin d'appeler le `hand
 
 ---
 
-## Exécution et déclenchement du Handler
+## Exécution et déclenchement du handler
 
 Dans un premier temps, j'ai validé la syntaxe YAML de mon playbook :
 
@@ -132,7 +132,7 @@ Aucune erreur n'étant remontée, j'ai lancé l'exécution du playbook :
 $ ansible-playbook playbooks/chrony.yml
 ```
 
-Lors de cette première exécution, la configuration a été modifiée (état `changed`), ce qui a logiquement déclenché le Handler `Restart chronyd` pour redémarrer le service et prendre en compte les changements :
+Lors de cette première exécution, la configuration a été modifiée (état `changed`), ce qui a logiquement déclenché le handler `Restart chronyd` pour redémarrer le service et prendre en compte les changements :
 
 ![Premiere execution avec declenchement du handler](../challenges-handlers/captures/capture2.png)
 
@@ -140,14 +140,14 @@ Lors de cette première exécution, la configuration a été modifiée (état `c
 
 ## Vérification de l'idempotence
 
-Pour m'assurer que l'idempotence et le mécanisme du Handler fonctionnent correctement, j'ai relancé exactement le même playbook :
+Pour m'assurer que l'idempotence et le mécanisme du handler fonctionnent correctement, j'ai relancé exactement le même playbook :
 
 ```bash
 $ !! 
 $ ansible-playbook playbooks/chrony.yml
 ```
 
-Cette fois-ci, la configuration étant déjà la bonne, l'état remonté est `ok`. Par conséquent, le Handler n'a pas été appelé et le service n'a pas subi de redémarrage inutile :
+Cette fois-ci, la configuration étant déjà la bonne, l'état remonté est `ok`. Par conséquent, le handler n'a pas été appelé et le service n'a pas subi de redémarrage inutile :
 
 ![!Seconde execution montrant l'idempotence](../challenges-handlers/captures/capture3.png)
 

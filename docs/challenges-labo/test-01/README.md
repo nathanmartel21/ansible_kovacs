@@ -8,9 +8,9 @@
 
 Cet exercice pratique test-01 fait partie du laboratoire Ansible pour la prise en main. Il utilise quatre machines Alpine Linux 3.19 pour mettre en place un environnement de pratique avec Ansible.
 
-## Récupération de la box Vagrant
+## Récupération de la box vagrant
 
-J'ai récupéré la box Alpine Linux 3.19 compatible avec VirtualBox :
+J'ai récupéré la box Alpine Linux 3.19 compatible avec virtualbox :
 
 ```bash
 $ vagrant box add generic/alpine319
@@ -18,7 +18,7 @@ $ vagrant box add generic/alpine319
 
 ## Démarrage des machines virtuelles
 
-J'ai démarré le cluster de quatre machines virtuelles Alpine Linux avec la commande `vagrant up`. Les machines virtuelles sont bien créées dans VirtualBox.
+J'ai démarré le cluster de quatre machines virtuelles Alpine Linux avec la commande `vagrant up`. Les machines virtuelles sont bien créées dans virtualbox.
 
 ![vagrant up](../test-01/captures/capture1.png)
 

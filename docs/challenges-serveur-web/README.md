@@ -1,4 +1,4 @@
-# Atelier-10 : Un serveur web simple avec Apache
+# Atelier-10 : Un serveur web simple avec apache
 
 ⚠️ **Ce document est classifié sous TLP: RED**
 
@@ -6,7 +6,7 @@
 
 ## Description
 
-Cet atelier pratique a pour objectif de déployer un serveur web simple avec Apache sur différentes distributions Linux (Debian, Rocky Linux et SUSE Linux). L'enjeu est d'utiliser des playbooks Ansible pour gérer les spécificités de chaque distribution Linux, notamment en ce qui concerne le gestionnaire de paquets, le nom du service Apache et l'emplacement par défaut de la page web (`DocumentRoot`).
+Cet atelier pratique a pour objectif de déployer un serveur web simple avec apache sur différentes distributions Linux (Debian, Rocky Linux et SUSE Linux). L'enjeu est d'utiliser des playbooks Ansible pour gérer les spécificités de chaque distribution Linux, notamment en ce qui concerne le gestionnaire de paquets, le nom du service apache et l'emplacement par défaut de la page web (`DocumentRoot`).
 
 ## Démarrage des machines virtuelles
 
@@ -69,12 +69,12 @@ J'ai créé le playbook `playbooks/apache-debian.yml`. Pour Debian, le gestionna
       apt:
         update_cache: true
 
-    - name: Install Apache
+    - name: Install apache
       apt:
         name: apache2
         state: present
 
-    - name: Start and enable Apache
+    - name: Start and enable apache
       service:
         name: apache2
         state: started
@@ -109,7 +109,7 @@ Le résultat montre que la page renvoie bien `Apache web server running on Debia
 
 ## Déploiement sur Rocky Linux
 
-J'ai créé le playbook `playbooks/apache-rocky.yml`. Sous Rocky Linux, le gestionnaire de paquets est `dnf` et le paquet/service Apache porte le nom de `httpd` :
+J'ai créé le playbook `playbooks/apache-rocky.yml`. Sous Rocky Linux, le gestionnaire de paquets est `dnf` et le paquet/service apache porte le nom de `httpd` :
 
 ```yaml
 ---
@@ -117,12 +117,12 @@ J'ai créé le playbook `playbooks/apache-rocky.yml`. Sous Rocky Linux, le gesti
 - hosts: rocky
 
   tasks:
-    - name: Install Apache
+    - name: Install apache
       dnf:
         name: httpd
         state: present
 
-    - name: Start and enable Apache
+    - name: Start and enable apache
       service:
         name: httpd
         state: started
@@ -165,12 +165,12 @@ J'ai créé le playbook `playbooks/apache-suse.yml`. Sur SUSE Linux, le gestionn
 - hosts: suse
 
   tasks:
-    - name: Install Apache
+    - name: Install apache
       zypper:
         name: apache2
         state: present
 
-    - name: Start and enable Apache
+    - name: Start and enable apache
       service:
         name: apache2
         state: started
@@ -216,7 +216,7 @@ $ vagrant destroy -f
 
 Ansible étant mon cœur de métier en alternance, il est possible d'utiliser **un seul playbook capable de s’adapter à la distribution** grâce aux facts Ansible (`ansible_os_family`).
 
-Je me suis amusé à faire un playbook unique permettant d’installer **Apache sur Debian, Rocky Linux et SUSE** et en installant une page web personnalisée selon la distribution. Voici le playbook complet :
+Je me suis amusé à faire un playbook unique permettant d’installer **apache sur Debian, Rocky Linux et SUSE** et en installant une page web personnalisée selon la distribution. Voici le playbook complet :
 
 ```yaml
 ---
@@ -230,32 +230,32 @@ Je me suis amusé à faire un playbook unique permettant d’installer **Apache 
         update_cache: true
       when: ansible_os_family == "Debian"
 
-    - name: Install Apache on Debian
+    - name: Install apache on Debian
       apt:
         name: apache2
         state: present
       when: ansible_os_family == "Debian"
 
-    - name: Install Apache on Rocky
+    - name: Install apache on Rocky
       dnf:
         name: httpd
         state: present
       when: ansible_os_family == "RedHat"
 
-    - name: Install Apache on SUSE
+    - name: Install apache on SUSE
       zypper:
         name: apache2
         state: present
       when: ansible_os_family == "Suse"
 
-    - name: Start Apache on Debian and SUSE
+    - name: Start apache on Debian and SUSE
       service:
         name: apache2
         state: started
         enabled: true
       when: ansible_os_family == "Debian" or ansible_os_family == "Suse"
 
-    - name: Start Apache on Rocky
+    - name: Start apache on Rocky
       service:
         name: httpd
         state: started

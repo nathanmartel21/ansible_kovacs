@@ -6,7 +6,7 @@
 
 ## Description
 
-Cet atelier pratique a pour objectif de découvrir et de manipuler les **templates Jinja2** dans Ansible. Les templates permettent de personnaliser dynamiquement les fichiers que nous installons sur les Target Hosts.
+Cet atelier pratique a pour objectif de découvrir et de manipuler les **templates jinja2** dans Ansible. Les templates permettent de personnaliser dynamiquement les fichiers que nous installons sur les Target Hosts.
 
 Dans le cadre de ce laboratoire, l'objectif final était de déployer le service de synchronisation NTP `chrony` sur un parc hétérogène (Debian, Ubuntu, Rocky Linux, SUSE Linux). L'enjeu principal était d'utiliser le module `template` pour injecter dynamiquement le chemin absolu du fichier de configuration en tant que commentaire sur la première ligne, en adaptant ce chemin selon la famille du système d'exploitation cible.
 
@@ -46,7 +46,7 @@ L'environnement `direnv` s'est chargé automatiquement.
 
 ---
 
-## Création du Template Jinja2
+## Création du Template jinja2
 
 Le module `template` va par défaut chercher les fichiers portant l'extension `.j2` dans un sous-répertoire `templates/` situé à côté du playbook.
 
@@ -57,7 +57,7 @@ $ mkdir -p playbooks/templates
 $ vim playbooks/templates/chrony.conf.j2
 ```
 
-J'ai inséré la configuration NTP demandée, en utilisant la syntaxe Jinja2 `{{ chrony_conf_path }}` sur la première ligne pour que la variable (définie dans le playbook) s'injecte dynamiquement :
+J'ai inséré la configuration NTP demandée, en utilisant la syntaxe jinja2 `{{ chrony_conf_path }}` sur la première ligne pour que la variable (définie dans le playbook) s'injecte dynamiquement :
 
 ```jinja2
 # {{ chrony_conf_path }}
@@ -77,7 +77,7 @@ logdir /var/log/chrony
 
 ## Création du playbook
 
-Ensuite, j'ai écrit le playbook `chrony.yml`. J'ai utilisé une définition de variables conditionnelles (`if/else` en syntaxe Jinja2) dans la section `vars` pour attribuer le bon chemin de configuration et le bon nom de service selon la famille d'OS (`ansible_os_family`).
+Ensuite, j'ai écrit le playbook `chrony.yml`. J'ai utilisé une définition de variables conditionnelles (`if/else` en syntaxe jinja2) dans la section `vars` pour attribuer le bon chemin de configuration et le bon nom de service selon la famille d'OS (`ansible_os_family`).
 
 ```bash
 $ vim playbooks/chrony.yml

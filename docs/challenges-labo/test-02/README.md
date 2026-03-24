@@ -26,7 +26,7 @@ $ vagrant box add bento/ubuntu-22.04
 
 ## Démarrage du cluster de machines virtuelles
 
-J'ai démarré le cluster complet avec la commande `vagrant up`. Les quatre machines virtuelles sont bien créées dans VirtualBox.
+J'ai démarré le cluster complet avec la commande `vagrant up`. Les quatre machines virtuelles sont bien créées dans virtualbox.
 
 ![vagrant up](../test-02/captures/capture1.png)
 

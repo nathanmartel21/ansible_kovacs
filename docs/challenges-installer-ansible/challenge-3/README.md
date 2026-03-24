@@ -6,7 +6,7 @@
 
 ## Description
 
-Ce troisième challenge illustre l’installation d’Ansible sur un Control Host Rocky Linux en utilisant **PIP** et un environnement Python isolé créé avec `virtualenv` (module standard de Python sur Rocky). Cette méthode est utile lorsqu’aucun paquet natif n’est disponible ou qu’une version plus récente est souhaitée.
+Ce troisième challenge illustre l’installation d’Ansible sur un Control Host Rocky Linux en utilisant **PIP** et un environnement python isolé créé avec `virtualenv` (module standard de python sur Rocky). Cette méthode est utile lorsqu’aucun paquet natif n’est disponible ou qu’une version plus récente est souhaitée.
 
 > Contrairement à Debian, il n’est pas nécessaire d’installer le paquet `python3-venv` : la bibliothèque `venv` fait déjà partie de la distribution.
 
@@ -61,7 +61,7 @@ $ source ~/.venv/ansible/bin/activate
 (ansible) $ pip install ansible
 ```
 
-L’installation télécharge plusieurs dépendances Python ; au terme, Ansible core 2.15.13 et ansible 8.7.0 étaient présents.
+L’installation télécharge plusieurs dépendances python ; au terme, Ansible core 2.15.13 et ansible 8.7.0 étaient présents.
 
 ## Vérification de l’installation
 
@@ -75,7 +75,7 @@ Sortie obtenue :
 
 ![ansible --version](../challenge-3/captures/capture1.png)
 
-L’usage d’un environnement virtuel garantit que le système hôte reste propre et évite tout conflit avec des paquets Python globaux.
+L’usage d’un environnement virtuel garantit que le système hôte reste propre et évite tout conflit avec des paquets python globaux.
 
 ## Nettoyage
 

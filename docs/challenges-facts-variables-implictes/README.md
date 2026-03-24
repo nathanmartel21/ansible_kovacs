@@ -6,7 +6,7 @@
 
 ## Description
 
-Cet atelier pratique a pour objectif d'intégrer par la pratique le fonctionnement des **facts** et des **variables implicites** (magic vars) dans Ansible. J'ai écrit des playbooks permettant de récupérer dynamiquement des informations sur les hôtes cibles (gestionnaire de paquets, version de Python et serveurs DNS) en utilisant les variables fournies automatiquement par le rassemblement de facts (`gather_facts`).
+Cet atelier pratique a pour objectif d'intégrer par la pratique le fonctionnement des **facts** et des **variables implicites** (magic vars) dans Ansible. J'ai écrit des playbooks permettant de récupérer dynamiquement des informations sur les hôtes cibles (gestionnaire de paquets, version de python et serveurs DNS) en utilisant les variables fournies automatiquement par le rassemblement de facts (`gather_facts`).
 
 ## Démarrage des machines virtuelles
 
@@ -71,9 +71,9 @@ Résultat obtenu :
 
 ---
 
-## Version de Python (python-info.yml)
+## Version de python (python-info.yml)
 
-J'ai ensuite créé le playbook `playbooks/python-info.yml` pour afficher la version de Python installée sur chaque hôte en utilisant le fact `ansible_python_version` :
+J'ai ensuite créé le playbook `playbooks/python-info.yml` pour afficher la version de python installée sur chaque hôte en utilisant le fact `ansible_python_version` :
 
 ```yaml
 ---
@@ -81,9 +81,9 @@ J'ai ensuite créé le playbook `playbooks/python-info.yml` pour afficher la ver
 
   tasks:
 
-    - name: Display Python version
+    - name: Display python version
       debug:
-        msg: "Host {{ inventory_hostname }} runs Python {{ ansible_python_version }}"
+        msg: "Host {{ inventory_hostname }} runs python {{ ansible_python_version }}"
 ```
 
 J'ai vérifié la syntaxe du playbook et je l'ai exécuté :

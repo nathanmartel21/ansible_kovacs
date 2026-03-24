@@ -20,7 +20,7 @@ Depuis le répertoire `atelier-01`, j’ai démarré la machine virtuelle Ubuntu
 $ vagrant up ubuntu
 ```
 
-La machine virtuelle est correctement créée et démarrée via **VirtualBox**.
+La machine virtuelle est correctement créée et démarrée via **virtualbox**.
 
 ## Connexion à la machine virtuelle
 

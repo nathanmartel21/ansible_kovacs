@@ -18,7 +18,7 @@ Depuis le répertoire `atelier-01`, la machine virtuelle Ubuntu est initialisée
 $ vagrant up ubuntu
 ```
 
-La VM se crée et démarre via **VirtualBox** comme précédemment.
+La VM se crée et démarre via **virtualbox** comme précédemment.
 
 ## Connexion à la machine virtuelle
 
