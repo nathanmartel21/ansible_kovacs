@@ -17,7 +17,7 @@
   <img src="https://img.shields.io/badge/infrastructure-IaC-blue" alt="Infrastructure as Code"/>
   <img src="https://img.shields.io/badge/école-IMT%20Mines%20Alès-orange" alt="IMT Mines Alès"/>
   <img src="https://img.shields.io/badge/langue-Français-white" alt="Français"/>
-  <img src="https://img.shields.io/badge/license-TLP:RED-red" alt="Français"/>
+  <img src="https://img.shields.io/badge/license-TLP:RED-red" alt="TLP:RED"/>
 </p>
 
 ---
