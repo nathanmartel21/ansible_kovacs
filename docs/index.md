@@ -89,4 +89,4 @@ Les ateliers sont basés sur la formation :
 
 Ce dépôt est distribué sous la classification **TLP: RED**.
 
-Pour plus de détails sur les restrictions de partage et d'utilisation, veuiller consulter le fichier de license.
+Pour plus de détails sur les restrictions de partage et d'utilisation, veuiller consulter le fichier de license présent dans le dépôt.
